@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 template <class T, class keyT>
 struct node_st
@@ -353,8 +354,8 @@ void node_st<T, keyT>::Show(std::ostream &out, int level) const
 
 	if (tr)
 	{
-		char is_red = "b";
-		if (red) is_red = "r";
+		std::string is_red = "black";
+		if (red) is_red = "red";
 		out << tr->value<<" "<<tr->key << "\n";
 		for (int i = 0; i<level; i++)
 			out << "   ";
